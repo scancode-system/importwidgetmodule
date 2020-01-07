@@ -1,0 +1,13 @@
+{
+    "name": "ImportWidget",
+    "alias": "importwidget",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\ImportWidget\\Providers\\ImportWidgetServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

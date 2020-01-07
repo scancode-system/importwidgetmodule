@@ -1,0 +1,26 @@
+{
+    "name": "scancode-system/importwidget-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\ImportWidget\\Providers\\ImportWidgetServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ImportWidget\\": ""
+        }
+    },
+    "type": "laravel-module"
+}

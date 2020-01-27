@@ -11,7 +11,7 @@
         <div class="text-value">{{ $failures }}</div>
         <div class="text-uppercase text-muted small">Falha</div>
     </div>
-    @if($completed == 100 && ($failures > 0 || $updated > 0))
+    @if($completed == 100 && ($failures > 0))
     <div>
         <a href="{{ route('importwidget.report', $module.$method) }}" class="text-muted text-decoration-none">
             <i class="fa fa-file-text-o fa-lg  fa-2x mb-2"></i><br>

@@ -42,7 +42,11 @@ class IndexComposer extends ServiceComposer
 
     private function title()
     {
-        $this->title = $this->module;
+        $this->title = SessionService::title($this->module, $this->method); //$this->module;
+        if(is_null($this->title))
+        {
+            $this->title = $this->module;
+        }
     }
 
     private function new()

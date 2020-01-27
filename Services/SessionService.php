@@ -78,7 +78,7 @@ class SessionService {
 		if($increment){
 			session([$module.$method.'.updated' => (self::updated($module, $method)+1)]);
 			session()->save();
-			Storage::append('failures/'.$module.$method, $report);
+			//Storage::append('failures/'.$module.$method, $report);
 		} else {
 			return session($module.$method.'.updated', 0);
 		}
@@ -102,6 +102,17 @@ class SessionService {
 			return floor(session($module.$method.'.completed', 0));
 		} else {
 			session([$module.$method.'.completed' => $completed]);
+			session()->save();
+		}
+	}
+
+	public static  function title($module, $method, $title = null)
+	{
+		if(is_null($title))
+		{
+			return session($module.$method.'.title', null);
+		} else {
+			session([$module.$method.'.title' => $title]);
 			session()->save();
 		}
 	}

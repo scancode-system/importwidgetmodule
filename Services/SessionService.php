@@ -78,7 +78,7 @@ class SessionService {
 		if($increment){
 			session([$module.$method.'.updated' => (self::updated($module, $method)+1)]);
 			session()->save();
-			//Storage::append('failures/'.$module.$method, $report);
+			Storage::append('failures/'.$module.$method, $report);
 		} else {
 			return session($module.$method.'.updated', 0);
 		}
